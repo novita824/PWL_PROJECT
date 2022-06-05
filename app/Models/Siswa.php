@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Siswa extends Model
 {
-    use HasFactory;
+    protected $table="siswa";
+    public $timestamps= false;
+    protected $primaryKey = 'nisn';
+
+    protected $fillable = [
+        'Nisn',
+        'Nama',
+        'Tanggal Lahir',
+        'Alamat',
+        'Agama',
+        'Jurusan',
+    ];
 }
