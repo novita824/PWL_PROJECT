@@ -13,8 +13,14 @@ class CreateTableDataSiswa extends Migration
      */
     public function up()
     {
-        Schema::create('table_data_siswa', function (Blueprint $table) {
-            $table->id();
+        Schema::create('siswa', function (Blueprint $table) {
+            $table->id('id_siswa');
+            $table->string('nisn', 10)->index();
+            $table->string('nama', 25)->index();
+            $table->string('tanggallahir',25);
+            $table->string('alamat',25);
+            $table->string('agama',10);
+            $table->string('jurusan',35);
             $table->timestamps();
         });
     }

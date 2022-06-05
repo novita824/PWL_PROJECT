@@ -13,8 +13,8 @@
               </div>
               <div class="col-7 col-md-8">
                 <div class="numbers">
-                  <p class="card-category">Capacity</p>
-                  <p class="card-title">150GB<p>
+                  <p class="card-category">Data Siswa</p>
+                  <p class="card-title">Siswa<p>
                 </div>
               </div>
             </div>
