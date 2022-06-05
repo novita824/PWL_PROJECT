@@ -32,6 +32,6 @@ class CreateTableDataSiswa extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_data_siswa');
+        Schema::dropIfExists('siswa');
     }
 }
