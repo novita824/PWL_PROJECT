@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Guru extends Model
 {
-    use HasFactory;
+    protected $table="guru";
+    public $timestamps= false;
+    protected $primaryKey = 'nip';
+
+    protected $fillable = [
+        'nip',
+        'Nama',
+        'Tanggal Lahir',
+        'Jenis Kelamin',
+        'Pendidikan',
+        'Mengajar Mapel',
+    ];
 }
