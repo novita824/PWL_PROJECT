@@ -14,9 +14,9 @@ class Guru extends Model
     protected $fillable = [
         'nip',
         'Nama',
-        'Tanggal Lahir',
-        'Jenis Kelamin',
+        'TanggalLahir',
+        'JenisKelamin',
         'Pendidikan',
-        'Mengajar Mapel',
+        'MengajarMapel',
     ];
 }

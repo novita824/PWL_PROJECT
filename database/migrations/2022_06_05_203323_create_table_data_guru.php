@@ -13,8 +13,14 @@ class CreateTableDataGuru extends Migration
      */
     public function up()
     {
-        Schema::create('table_data_guru', function (Blueprint $table) {
-            $table->id();
+        Schema::create('guru', function (Blueprint $table) {
+            $table->nip('NIP');
+            $table->string('Nama', 25)->index();
+            $table->string('TanggalLahir', 35);
+            $table->string('JenisKelamin', 25);
+            $table->string('Pendidikan', 35);
+            $table->string('MengajarMapel', 35);
+            $table->string('fotogr');
             $table->timestamps();
         });
     }
