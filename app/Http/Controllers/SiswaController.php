@@ -53,7 +53,7 @@ class SiswaController extends Controller
         $request->validate([
             'Nisn' => 'required',
             'Nama' => 'required',
-            'Tanggal Lahir' => 'required',
+            'TanggalLahir' => 'required',
             'Alamat' => 'required',
             'Agama' => 'required',
             'Jurusan' => 'required',
