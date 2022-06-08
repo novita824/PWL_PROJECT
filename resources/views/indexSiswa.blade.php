@@ -7,7 +7,7 @@
             <h2>SMKN 1 PURWOSARI</h2>
             </div>
             <div class="float-right my-2">
-                <a class="btn btn-success" href="{{ route('siswa.createSiswa') }}"> Input Siswa</a>
+                <a class="btn btn-success" href="{{ route('siswa.create') }}"> Input Siswa</a>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
             <th>Jurusan</th>
             <th width="280px">Action</th>
         </tr>
-    @foreach ($paginate as $sws)
+    @foreach ($siswa as $sws)
         <tr>
    
             <td>{{ $sws ->nisn }}</td>
@@ -46,10 +46,10 @@
             <td>{{ $sws ->agama }}</td>
             <td>{{ $sws ->jurusan }}</td>
             <td>
-            <form action="{{ route('siswa.destroySiswa',['siswa'=>$sws->nisn]) }}" method="POST">
+            <form action="{{ route('siswa.destroy',['siswa'=>$sws->nisn]) }}" method="POST">
    
-                <a class="btn btn-info" href="{{ route('siswa.showSiswa',$sws->nisn) }}">Show</a>
-                <a class="btn btn-primary" href="{{ route('siswa.editSiswa',$sws->nisn) }}">Edit</a>
+                <a class="btn btn-info" href="{{ route('siswa.show',$sws->nisn) }}">Show</a>
+                <a class="btn btn-primary" href="{{ route('siswa.edit',$sws->nisn) }}">Edit</a>
                 @csrf
                 @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>

@@ -14,7 +14,7 @@ class CreateTableDataGuru extends Migration
     public function up()
     {
         Schema::create('guru', function (Blueprint $table) {
-            $table->nip('NIP');
+            $table->id('id_guru');
             $table->string('Nama', 25)->index();
             $table->string('TanggalLahir', 35);
             $table->string('JenisKelamin', 25);
