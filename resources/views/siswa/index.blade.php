@@ -41,17 +41,17 @@
     @foreach ($siswa as $sws)
         <tr>
    
-            <td>{{ $sws ->nisn }}</td>
-            <td>{{ $sws ->nama }}</td>
-            <td>{{ $sws ->tanggallahir }}</td>
-            <td>{{ $sws ->alamat }}</td>
-            <td>{{ $sws ->agama }}</td>
-            <td>{{ $sws ->jurusan }}</td>
+            <td>{{ $sws ->Nisn }}</td>
+            <td>{{ $sws ->Nama }}</td>
+            <td>{{ $sws ->TanggalLahir }}</td>
+            <td>{{ $sws ->Alamat }}</td>
+            <td>{{ $sws ->Agama }}</td>
+            <td>{{ $sws ->Jurusan }}</td>
             <td>
-            <form action="{{ route('siswa.destroy',['siswa'=>$sws->nisn]) }}" method="POST">
+            <form action="{{ route('siswa.destroy',['siswa'=>$sws->Nisn]) }}" method="POST">
    
-                <a class="btn btn-info" href="{{ route('siswa.show',$sws->nisn) }}">Show</a>
-                <a class="btn btn-primary" href="{{ route('siswa.edit',$sws->nisn) }}">Edit</a>
+                <a class="btn btn-info" href="{{ route('siswa.show',$sws->Nisn) }}">Show</a>
+                <a class="btn btn-primary" href="{{ route('siswa.edit',$sws->Nisn) }}">Edit</a>
                 @csrf
                 @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>

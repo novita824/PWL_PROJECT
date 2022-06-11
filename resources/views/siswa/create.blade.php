@@ -23,8 +23,8 @@
     <form method="post" action="{{ route('siswa.store') }}" id="myForm">
     @csrf
         <div class="form-group">
-        <label for="nisn">Nisn</label>
-        <input type="text" name="nisn" class="form-control" id="nisn" aria-describedby="nisn" >
+        <label for="Nisn">Nisn</label>
+        <input type="text" name="Nisn" class="form-control" id="Nisn" aria-describedby="Nisn" >
     </div>
     <div class="form-group">
         <label for="Nama">Nama</label>

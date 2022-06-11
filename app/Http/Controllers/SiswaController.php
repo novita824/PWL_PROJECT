@@ -26,7 +26,7 @@ class SiswaController extends Controller
         $request->validate([
             'Nisn' => 'required',
             'Nama' => 'required',
-            'Tanggal Lahir' => 'required',
+            'TanggalLahir' => 'required',
             'Alamat' => 'required',
             'Agama' => 'required',
             'Jurusan' => 'required',
@@ -38,7 +38,7 @@ class SiswaController extends Controller
 
     public function show($Nisn)
     {
-        $Siswa = Siswa::find($Nisn);
+        $siswa = Siswa::find($Nisn);
         return view('siswa.detail', compact('Siswa'));
     }
     
