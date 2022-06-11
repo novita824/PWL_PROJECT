@@ -36,19 +36,19 @@ class SiswaController extends Controller
             ->with('success', 'Siswa Berhasil Ditambahkan');
     }
 
-    public function show($Nisn)
+    public function show($nisn)
     {
-        $siswa = Siswa::find($Nisn);
-        return view('siswa.detail', compact('Siswa'));
+        $siswa = Siswa::find($nisn);
+        return view('siswa.detail', compact('siswa'));
     }
     
-    public function edit($Nisn)
+    public function edit($nisn)
     {
-        $Siswa = Siswa::find($Nisn);
-        return view('siswa.edit', compact('Siswa'));
+        $siswa = DB::table('Siswa')->where('Nisn', $nisn)->first();
+        return view('siswa.edit', compact('siswa'));
     }
 
-    public function update(Request $request, $Nisn)
+    public function update(Request $request, $nisn)
     {
         $request->validate([
             'Nisn' => 'required',
@@ -58,14 +58,14 @@ class SiswaController extends Controller
             'Agama' => 'required',
             'Jurusan' => 'required',
         ]);
-        Siswa::find($Nisn)->update($request->all());
+        Siswa::find($nisn)->update($request->all());
         return redirect()->route('siswa.index')
             ->with('success', 'Siswa Berhasil Diupdate');
     }
 
-    public function destroy($Nisn)
+    public function destroy($nisn)
     {
-        Siswa::find($Nisn)->delete();
+        Siswa::find($nisn)->delete();
         return redirect()->route('siswa.index')
             ->with('success', 'Siswa Berhasil Dihapus');
     }

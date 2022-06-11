@@ -36,8 +36,8 @@
         <input type="Alamat" name="Alamat" class="form-control" id="Alamat" value="{{ $Siswa->Alamat }}" aria-describedby="Alamat" >
     </div>
     <div class="form-group">
-        <label for="Tanggal lahir">Tanggal Lahir</label>
-        <input type="Tanggal lahir" name="Tanggal lahir" class="form-control" id="Tanggal lahir" value="{{ $Siswa->TanggalLahir }}" aria-describedby="Tanggal lahir" >
+        <label for="TanggalLahir">Tanggal Lahir</label>
+        <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" value="{{ $Siswa->TanggalLahir }}" aria-describedby="TanggalLahir" >
     </div>
     <div class="form-group">
         <label for="Agama">Agama</label>
