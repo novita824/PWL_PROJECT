@@ -54,13 +54,13 @@ Coded by www.creative-tim.com
       <div class="sidebar-wrapper">
       <!--MENU-->
         <ul class="nav">
+            <li>
+                <a href="./">
+                <i class="nc-icon nc-bank"></i>
+                <p>Dashboard</p>
+                </a>
+            </li>
           <li class="active ">
-            <a href="./dasboard">
-              <i class="nc-icon nc-bank"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li>
             <a href="./siswa">
               <i class="nc-icon nc-diamond"></i>
               <p>Data Siswa</p>
@@ -108,18 +108,6 @@ Coded by www.creative-tim.com
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <form>
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="nc-icon nc-zoom-split"></i>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
       </nav>
       <!-- End Navbar -->

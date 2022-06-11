@@ -12,13 +12,13 @@ class SiswaController extends Controller
     {
         $siswa = Siswa::all();
         $posts = Siswa::orderBy('Nisn', 'desc')->paginate(6);
-        return view('indexSiswa', compact('siswa'))
+        return view('siswa.index', compact('siswa'))
         ->with('paginate', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
     {
-        return view('createSiswa');
+        return view('siswa.create');
     }
 
     public function store(Request $request)
@@ -32,20 +32,20 @@ class SiswaController extends Controller
             'Jurusan' => 'required',
         ]);
         Siswa::create($request->all());
-        return redirect()->route('indexSiswa')
+        return redirect()->route('siswa.index')
             ->with('success', 'Siswa Berhasil Ditambahkan');
     }
 
     public function show($Nisn)
     {
         $Siswa = Siswa::find($Nisn);
-        return view('detailSiswa', compact('Siswa'));
+        return view('siswa.detail', compact('Siswa'));
     }
     
     public function edit($Nisn)
     {
         $Siswa = Siswa::find($Nisn);
-        return view('editSiswa', compact('Siswa'));
+        return view('siswa.edit', compact('Siswa'));
     }
 
     public function update(Request $request, $Nisn)
@@ -59,14 +59,14 @@ class SiswaController extends Controller
             'Jurusan' => 'required',
         ]);
         Siswa::find($Nisn)->update($request->all());
-        return redirect()->route('indexSiswa')
+        return redirect()->route('siswa.index')
             ->with('success', 'Siswa Berhasil Diupdate');
     }
 
     public function destroy($Nisn)
     {
         Siswa::find($Nisn)->delete();
-        return redirect()->route('indexSiswa')
+        return redirect()->route('siswa.index')
             ->with('success', 'Siswa Berhasil Dihapus');
     }
 }

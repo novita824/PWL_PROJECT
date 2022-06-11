@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DataSiswa extends Seeder
 {
@@ -13,6 +14,16 @@ class DataSiswa extends Seeder
      */
     public function run()
     {
-        //
+        $siswaa = [
+            [
+            'nisn' => '0184572834',
+            'nama' => 'Muhammad Roalfad Syarifuddin',
+            'tanggallahir' => '10 Maret 2001',
+            'alamat' => 'Kediri',
+            'agama' => 'Islam',
+            'jurusan' => 'Multimedia',
+            ],
+        ];
+        DB::table('siswa')->insert($siswaa);
     }
 }

@@ -1,4 +1,4 @@
-@extends('layoutSiswa')
+@extends('siswa.layout')
 
 @section('content')
     <div class="container mt-5">
@@ -12,11 +12,12 @@
                     <li class="list-group-item"><b>Nisn: </b>{{$Siswa->nisn}}</li>
                     <li class="list-group-item"><b>Nama: </b>{{$Siswa->nama}}</li>
                     <li class="list-group-item"><b>Tanggal Lahir: </b>{{$Siswa->tanggallahir}}</li>
+                    <li class="list-group-item"><b>Alamat: </b>{{$Siswa->alamat}}</li>
                     <li class="list-group-item"><b>Agama: </b>{{$Siswa->agama}}</li>
                     <li class="list-group-item"><b>Jurusan: </b>{{$Siswa->jurusan}}</li>
                 </ul>
             </div>
-            <a class="btn btn-success mt-3" href="{{ route('siswa.indexSiswa') }}">Kembali</a>
+            <a class="btn btn-success mt-3" href="{{ route('siswa.index') }}">Kembali</a>
         </div>
     </div>
 </div>

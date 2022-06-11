@@ -1,10 +1,11 @@
-@extends('layoutSiswa')
-
+@extends('siswa.layout')
+@extends('siswa.template')
 @section('content')
+<h3 style="margin-bottom: 65px;"></h3>
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left mt-2">
-            <h2>SMKN 1 PURWOSARI</h2>
             </div>
             <div class="float-right my-2">
                 <a class="btn btn-success" href="{{ route('siswa.create') }}"> Input Siswa</a>
@@ -26,7 +27,7 @@
             </span>
         </div>
     </form>
-
+    <h3 style="margin-bottom: 40px;"></h3>
     <table class="table table-bordered">
         <tr>
             <th>Nisn</th>
@@ -35,7 +36,7 @@
             <th>Alamat</th>
             <th>Agama</th>
             <th>Jurusan</th>
-            <th width="280px">Action</th>
+            <th width="260px">Action</th>
         </tr>
     @foreach ($siswa as $sws)
         <tr>
@@ -43,6 +44,7 @@
             <td>{{ $sws ->nisn }}</td>
             <td>{{ $sws ->nama }}</td>
             <td>{{ $sws ->tanggallahir }}</td>
+            <td>{{ $sws ->alamat }}</td>
             <td>{{ $sws ->agama }}</td>
             <td>{{ $sws ->jurusan }}</td>
             <td>
