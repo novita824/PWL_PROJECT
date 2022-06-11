@@ -1,9 +1,9 @@
 @extends('siswa.layout')
-
+@extends('siswa.template')
 @section('content')
 
 <div class="container mt-5">
-
+    <h3 style="margin-bottom: 75px;"></h3>
     <div class="row justify-content-center align-items-center">
         <div class="card" style="width: 24rem;">
             <div class="card-header">
