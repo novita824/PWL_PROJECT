@@ -55,13 +55,13 @@ Coded by www.creative-tim.com
       <!--MENU-->
         <ul class="nav">
           <li class="active ">
-            <a href="./dashboard.html">
+            <a href="./dashboard.blade.php">
               <i class="nc-icon nc-bank"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="./indexSiswa.html">
+            <a href="./indexSiswa.blade.php">
               <i class="nc-icon nc-diamond"></i>
               <p>Data Siswa</p>
             </a>
@@ -119,37 +119,6 @@ Coded by www.creative-tim.com
                 </div>
               </div>
             </form>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link btn-magnify" href="javascript:;">
-                  <i class="nc-icon nc-layout-11"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Stats</span>
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item btn-rotate dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="nc-icon nc-bell-55"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Some Actions</span>
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn-rotate" href="javascript:;">
-                  <i class="nc-icon nc-settings-gear-65"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Account</span>
-                  </p>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </nav>
@@ -164,9 +133,8 @@ Coded by www.creative-tim.com
           <div class="row">
             <nav class="footer-nav">
               <ul>
-                <li><a href="https://www.creative-tim.com" target="_blank">Novianawati & Novitasari</a></li>
-                <li><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
-                <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+                <li><a href="https://www.creative-tim.com" target="_blank">Novianawati</a></li>
+                <li><a href="https://www.creative-tim.com/blog" target="_blank">Novitasari</a></li>
               </ul>
             </nav>
             <div class="credits ml-auto">
