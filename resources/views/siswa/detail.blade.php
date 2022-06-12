@@ -9,12 +9,12 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>Nisn: </b>{{$Siswa->nisn}}</li>
-                    <li class="list-group-item"><b>Nama: </b>{{$Siswa->nama}}</li>
-                    <li class="list-group-item"><b>Tanggal Lahir: </b>{{$Siswa->tanggallahir}}</li>
-                    <li class="list-group-item"><b>Alamat: </b>{{$Siswa->alamat}}</li>
-                    <li class="list-group-item"><b>Agama: </b>{{$Siswa->agama}}</li>
-                    <li class="list-group-item"><b>Jurusan: </b>{{$Siswa->jurusan}}</li>
+                    <li class="list-group-item"><b>Nisn: </b>{{$Siswa->Nisn}}</li>
+                    <li class="list-group-item"><b>Nama: </b>{{$Siswa->Nama}}</li>
+                    <li class="list-group-item"><b>Tanggal Lahir: </b>{{$Siswa->TanggalLahir}}</li>
+                    <li class="list-group-item"><b>Alamat: </b>{{$Siswa->Alamat}}</li>
+                    <li class="list-group-item"><b>Agama: </b>{{$Siswa->Agama}}</li>
+                    <li class="list-group-item"><b>Jurusan: </b>{{$Siswa->Jurusan}}</li>
                 </ul>
             </div>
             <a class="btn btn-success mt-3" href="{{ route('siswa.index') }}">Kembali</a>

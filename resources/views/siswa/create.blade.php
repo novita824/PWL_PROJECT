@@ -1,9 +1,9 @@
 @extends('siswa.layout')
-
+@extends('siswa.template')
 @section('content')
 
 <div class="container mt-5">
-
+    <h3 style="margin-bottom: 75px;"></h3>
     <div class="row justify-content-center align-items-center">
         <div class="card" style="width: 24rem;">
             <div class="card-header">
@@ -23,8 +23,8 @@
     <form method="post" action="{{ route('siswa.store') }}" id="myForm">
     @csrf
         <div class="form-group">
-        <label for="nisn">Nisn</label>
-        <input type="text" name="nisn" class="form-control" id="nisn" aria-describedby="nisn" >
+        <label for="Nisn">Nisn</label>
+        <input type="text" name="Nisn" class="form-control" id="Nisn" aria-describedby="Nisn" >
     </div>
     <div class="form-group">
         <label for="Nama">Nama</label>
