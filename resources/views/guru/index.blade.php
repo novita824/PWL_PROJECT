@@ -8,7 +8,7 @@
             <div class="pull-left mt-2">
             </div>
             <div class="float-right my-2">
-                <a class="btn btn-success" href="{{ route('guru.create') }}"> Input Siswa</a>
+                <a class="btn btn-success" href="{{ route('guru.create') }}"> Input Guru</a>
             </div>
         </div>
     </div>

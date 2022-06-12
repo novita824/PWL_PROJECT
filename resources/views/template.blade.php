@@ -67,19 +67,19 @@ Coded by www.creative-tim.com
             </a>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="./guru">
               <i class="nc-icon nc-pin-3"></i>
               <p>Data Guru</p>
             </a>
           </li>
           <li>
-            <a href="./notifications.html">
+            <a href="./mapel">
               <i class="nc-icon nc-bell-55"></i>
               <p>Data Mata Pelajaran</p>
             </a>
           </li>
           <li>
-            <a href="./user.html">
+            <a href="./jurusan">
               <i class="nc-icon nc-single-02"></i>
               <p>Data Jurusan</p>
             </a>

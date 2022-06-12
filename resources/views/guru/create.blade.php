@@ -1,5 +1,5 @@
 @extends('guru.layout')
-
+@extends('guru.template')
 @section('content')
 
 <div class="container mt-5">

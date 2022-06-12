@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('siswa', SiswaController::class);
+Route::resource('guru', GuruController::class);
 
 Route::get('/login', function () {
     return view('login');
