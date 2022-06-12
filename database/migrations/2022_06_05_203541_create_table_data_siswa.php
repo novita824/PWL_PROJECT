@@ -15,12 +15,12 @@ class CreateTableDataSiswa extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->id('id_siswa');
-            $table->string('nisn', 10)->index();
-            $table->string('nama', 25)->index();
-            $table->string('tanggallahir',25);
-            $table->string('alamat',25);
-            $table->string('agama',10);
-            $table->string('jurusan',35);
+            $table->string('Nisn', 10)->index();
+            $table->string('Nama', 25)->index();
+            $table->string('TanggalLahir',25);
+            $table->string('Alamat',25);
+            $table->string('Agama',10);
+            $table->string('Jurusan',35);
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@ class Siswa extends Model
 {
     protected $table="siswa";
     public $timestamps= false;
-    protected $primaryKey = 'nisn';
+    protected $primaryKey = 'Nisn';
 
     protected $fillable = [
         'Nisn',

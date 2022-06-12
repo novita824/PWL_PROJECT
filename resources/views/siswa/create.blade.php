@@ -27,24 +27,24 @@
         <input type="text" name="nisn" class="form-control" id="nisn" aria-describedby="nisn" >
     </div>
     <div class="form-group">
-        <label for="nama">Nama</label>
-        <input type="nama" name="nama" class="form-control" id="nama" ariadescribedby="nama" >
+        <label for="Nama">Nama</label>
+        <input type="Nama" name="Nama" class="form-control" id="Nama" ariadescribedby="Nama" >
     </div>
     <div class="form-group">
-        <label for="tanggallahir">Tanggal Lahir</label>
-        <input type="tanggallahir" name="tanggallahir" class="form-control" id="tanggallahir" ariadescribedby="tanggallahir" >
+        <label for="TanggalLahir">Tanggal Lahir</label>
+        <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" ariadescribedby="TanggalLahir" >
     </div>
     <div class="form-group">
-        <label for="alamat">Alamat</label>
-        <input type="alamat" name="alamat" class="form-control" id="alamat" ariadescribedby="alamat" >
+        <label for="Alamat">Alamat</label>
+        <input type="Alamat" name="Alamat" class="form-control" id="Alamat" ariadescribedby="Alamat" >
     </div>
     <div class="form-group">
-        <label for="agama">Agama</label>
-        <input type="agama" name="agama" class="form-control" id="agama" ariadescribedby="agama" >
+        <label for="Agama">Agama</label>
+        <input type="Agama" name="Agama" class="form-control" id="Agama" ariadescribedby="Agama" >
     </div>
     <div class="form-group">
-        <label for="jurusan">Jurusan</label>
-        <input type="jurusan" name="jurusan" class="form-control" id="jurusan" ariadescribedby="jurusan" >
+        <label for="Jurusan">Jurusan</label>
+        <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" ariadescribedby="Jurusan" >
     </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
