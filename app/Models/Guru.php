@@ -9,10 +9,10 @@ class Guru extends Model
 {
     protected $table="guru";
     public $timestamps= false;
-    protected $primaryKey = 'nip';
+    protected $primaryKey = 'Nip';
 
     protected $fillable = [
-        'nip',
+        'Nip',
         'Nama',
         'TanggalLahir',
         'JenisKelamin',

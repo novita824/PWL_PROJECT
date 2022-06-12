@@ -15,12 +15,12 @@ class CreateTableDataGuru extends Migration
     {
         Schema::create('guru', function (Blueprint $table) {
             $table->id('id_guru');
+            $table->string('Nisn', 30)->index();
             $table->string('Nama', 25)->index();
             $table->string('TanggalLahir', 35);
             $table->string('JenisKelamin', 25);
             $table->string('Pendidikan', 35);
             $table->string('MengajarMapel', 35);
-            $table->string('fotogr');
             $table->timestamps();
         });
     }
