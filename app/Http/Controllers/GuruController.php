@@ -3,82 +3,70 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Guru;
+use Illuminate\Support\Facades\DB;
 
 class GuruController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $guru = Guru::all();
+        $posts = Guru::orderBy('Nip', 'desc')->paginate(6);
+        return view('guru.index', compact('guru'))
+        ->with('paginate', (request()->input('page', 1) - 1) * 5);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('guru.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'Nip' => 'required',
+            'Nama' => 'required',
+            'TanggalLahir' => 'required',
+            'JenisKelamin' => 'required',
+            'Pendidikan' => 'required',
+            'MengajarMapel' => 'required',
+        ]);
+        Guru::create($request->all());
+        return redirect()->route('guru.index')
+            ->with('success', 'Guru Berhasil Ditambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function show($nip)
     {
-        //
+        $guru = Guru::find($nip);
+        return view('guru.detail', compact('guru'));
+    }
+    
+    public function edit($nip)
+    {
+        $guru = DB::table('Guru')->where('Nip', $nip)->first();
+        return view('guru.edit', compact('guru'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function update(Request $request, $nip)
     {
-        //
+        $request->validate([
+            'Nip' => 'required',
+            'Nama' => 'required',
+            'TanggalLahir' => 'required',
+            'JenisKelamin' => 'required',
+            'Pendidikan' => 'required',
+            'MengajarMapel' => 'required',
+        ]);
+        Guru::find($nip)->update($request->all());
+        return redirect()->route('guru.index')
+            ->with('success', 'Guru Berhasil Diupdate');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function destroy($nip)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Guru::find($nip)->delete();
+        return redirect()->route('guru.index')
+            ->with('success', 'Guru Berhasil Dihapus');
     }
 }
