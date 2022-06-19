@@ -67,7 +67,7 @@ Coded by www.creative-tim.com
             </a>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="./guru">
               <i class="nc-icon nc-pin-3"></i>
               <p>Data Guru</p>
             </a>
