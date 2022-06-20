@@ -61,6 +61,7 @@ Coded by www.creative-tim.com
                 </a>
             </li>
           <li>
+            <li class="active ">
             <a href="./siswa">
               <i class="nc-icon nc-diamond"></i>
               <p>Data Siswa</p>
