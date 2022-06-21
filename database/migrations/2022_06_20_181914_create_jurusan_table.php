@@ -13,8 +13,13 @@ class CreateJurusanTable extends Migration
      */
     public function up()
     {
-        Schema::create('jurusan', function (Blueprint $table) {
-            $table->id();
+        schema::create('jurusan', function (Blueprint $table) {
+            $table->id('id_jurusan');
+            $table->string('Kode', 30)->index();
+            $table->string('Nama', 25)->index();
+            $table->string('NamaPanjang', 55);
+            $table->string('Jurusan', 25);
+            $table->string('TotalUangGedung', 35);
             $table->timestamps();
         });
     }

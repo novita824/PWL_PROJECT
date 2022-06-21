@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Jurusan;
+use Illuminate\Support\Facades\DB;
 
 class JurusanController extends Controller
 {
@@ -13,7 +15,10 @@ class JurusanController extends Controller
      */
     public function index()
     {
-        //
+        $jurusan = Jurusan::all();
+        $posts = Jurusan::orderBy('Kode', 'desc')->paginate(6);
+        return view('jurusan.index', compact('jurusan'))
+        ->with('paginate', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -23,7 +28,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        //
+        return view('jurusan.create');
     }
 
     /**
@@ -34,7 +39,16 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'Kode' => 'required',
+            'Nama' => 'required',
+            'NamaPanjang' => 'required',
+            'Jurusan' => 'required',
+            'TotalUangGedung' => 'required',
+        ]);
+        Jurusan::create($request->all());
+        return redirect()->route('jurusan.index')
+            ->with('success', 'Jurusan Berhasil Ditambahkan');
     }
 
     /**
@@ -43,9 +57,10 @@ class JurusanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($kode)
     {
-        //
+        $jurusan = Jurusan::find($kode);
+        return view('jurusan.detail', compact('jurusan'));
     }
 
     /**
@@ -54,9 +69,10 @@ class JurusanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($kode)
     {
-        //
+        $jurusan = DB::table('jurusan')->where('Kode', $kode)->first();
+        return view('jurusan.edit', compact('jurusan'));
     }
 
     /**
@@ -66,9 +82,18 @@ class JurusanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $kode)
     {
-        //
+        $request->validate([
+            'Kode' => 'required',
+            'Nama' => 'required',
+            'NamaPanjang' => 'required',
+            'Jurusan' => 'required',
+            'TotalUangGedung' => 'required',
+        ]);
+        Jurusan::find($kode)->update($request->all());
+        return redirect()->route('jurusan.index')
+            ->with('success', 'Jurusan Berhasil Diupdate');
     }
 
     /**
@@ -77,8 +102,10 @@ class JurusanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($kode)
     {
-        //
+        Jurusan::find($kode)->delete();
+        return redirect()->route('jurusan.index')
+            ->with('success', 'Jurusan Berhasil Dihapus');
     }
 }
