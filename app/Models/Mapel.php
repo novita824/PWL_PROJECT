@@ -7,5 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mapel extends Model
 {
-    use HasFactory;
+    protected $table="mapel";
+    public $timestamps= false;
+    protected $primaryKey = 'Nama';
+
+    protected $fillable = [
+        'Nama',
+        'Tugas1',
+        'Tugas2',
+        'Tugas3',
+        'UTS',
+        'Tugas4',
+        'Tugas5',
+        'Tugas6',
+        'UAS',
+    ];
 }
