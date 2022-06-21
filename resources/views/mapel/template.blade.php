@@ -60,7 +60,7 @@ Coded by www.creative-tim.com
                 <p>Dashboard</p>
                 </a>
             </li>
-          <li class="active ">
+          <li>
             <a href="./siswa">
               <i class="nc-icon nc-diamond"></i>
               <p>Data Siswa</p>
@@ -72,7 +72,7 @@ Coded by www.creative-tim.com
               <p>Data Guru</p>
             </a>
           </li>
-          <li>
+          <li class="active">
             <a href="./mapel">
               <i class="nc-icon nc-bell-55"></i>
               <p>Data Mata Pelajaran</p>
