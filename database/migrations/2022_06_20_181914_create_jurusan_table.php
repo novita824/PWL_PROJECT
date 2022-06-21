@@ -13,7 +13,7 @@ class CreateJurusanTable extends Migration
      */
     public function up()
     {
-        chema::create('jurusan', function (Blueprint $table) {
+        schema::create('jurusan', function (Blueprint $table) {
             $table->id('id_jurusan');
             $table->string('Kode', 30)->index();
             $table->string('Nama', 25)->index();
