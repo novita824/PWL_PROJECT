@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 use App\Models\Mapel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MapelController extends Controller
 {
     public function index()
     {
-        $siswa = Mapel::all();
+        $mapel = Mapel::all();
         $posts = Mapel::orderBy('Nama', 'desc')->paginate(6);
         return view('mapel.index', compact('mapel'))
         ->with('paginate', (request()->input('page', 1) - 1) * 5);
@@ -45,7 +46,7 @@ class MapelController extends Controller
     
     public function edit($nama)
     {
-        $mapel = Mapel::table('Mapel')->where('Nama', $nama)->first();
+        $mapel = DB::table('Mapel')->where('Nama', $nama)->first();
         return view('mapel.edit', compact('mapel'));
     }
 
