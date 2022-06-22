@@ -25,23 +25,39 @@
     @method('PUT')
     <div class="form-group">
         <label for="Nama">Nama</label>
-        <input type="text" name="Nama" class="form-control" id="Nama" value="{{ $Siswa->Nama }}" aria-describedby="Nama" >
+        <input type="text" name="Nama" class="form-control" id="Nama" value="{{ $Mapel->Nama }}" aria-describedby="Nama" >
     </div>
     <div class="form-group">
-        <label for="Alamat">Alamat</label>
-        <input type="Alamat" name="Alamat" class="form-control" id="Alamat" value="{{ $Siswa->Alamat }}" aria-describedby="Alamat" >
+        <label for="Tugas1">Tugas 1</label>
+        <input type="Tugas1" name="Tugas1" class="form-control" id="Tugas1" value="{{ $Mapel->Tugas1 }}" aria-describedby="Tugas1" >
     </div>
     <div class="form-group">
-        <label for="TanggalLahir">Tanggal Lahir</label>
-        <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" value="{{ $Siswa->TanggalLahir }}" aria-describedby="TanggalLahir" >
+        <label for="Tugas2">Tugas 2</label>
+        <input type="Tugas2" name="Tugas2" class="form-control" id="Tugas2" value="{{ $Mapel->Tugas2 }}" aria-describedby="Tugas2" >
     </div>
     <div class="form-group">
-        <label for="Agama">Agama</label>
-        <input type="Agama" name="Agama" class="form-control" id="Agama" value="{{ $Siswa->Agama }}" aria-describedby="Agama" >
+        <label for="Tugas3">Tugas 3</label>
+        <input type="Tugas3" name="Tugas3" class="form-control" id="Tugas3" value="{{ $Mapel->Tugas3 }}" aria-describedby="Tugas3" >
     </div>
     <div class="form-group">
-        <label for="Jurusan">Jurusan</label>
-        <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" value="{{ $Siswa->Jurusan }}" aria-describedby="Jurusan" >
+        <label for="UTS">UTS</label>
+        <input type="UTS" name="UTS" class="form-control" id="UTS" value="{{ $Mapel->UTS }}" aria-describedby="UTS" >
+    </div>
+    <div class="form-group">
+        <label for="Tugas4">Tugas 4</label>
+        <input type="Tugas4" name="Tugas4" class="form-control" id="Tugas4" value="{{ $Mapel->Tugas4 }}" aria-describedby="Tugas4" >
+    </div>
+    <div class="form-group">
+        <label for="Tugas5">Tugas 5</label>
+        <input type="Tugas5" name="Tugas5" class="form-control" id="Tugas5" value="{{ $Mapel->Tugas5 }}" aria-describedby="Tugas5" >
+    </div>
+    <div class="form-group">
+        <label for="Tugas5">Tugas 5</label>
+        <input type="Tugas5" name="Tugas5" class="form-control" id="Tugas5" value="{{ $Mapel->Tugas5 }}" aria-describedby="Tugas5" >
+    </div>
+    <div class="form-group">
+        <label for="UAS">UAS</label>
+        <input type="UAS" name="UAS" class="form-control" id="UAS" value="{{ $Mapel->UAS }}" aria-describedby="UAS" >
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     </form>
