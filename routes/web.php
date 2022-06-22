@@ -3,6 +3,7 @@
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\MapelController;
+use App\Http\Controllers\JurusanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Route::resource('siswa', SiswaController::class);
 Route::resource('guru', GuruController::class);
 Route::resource('mapel', MapelController::class);
+Route::resource('jurusan', JurusanController::class);
 
 Route::get('/login', function () {
     return view('login');

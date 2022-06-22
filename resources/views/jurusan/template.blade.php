@@ -67,7 +67,7 @@ Coded by www.creative-tim.com
               <p>Data Siswa</p>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a href="./guru">
               <i class="nc-icon nc-pin-3"></i>
               <p>Data Guru</p>
@@ -79,7 +79,7 @@ Coded by www.creative-tim.com
               <p>Data Mata Pelajaran</p>
             </a>
           </li>
-          <li>
+          <li class="active">
             <a href="./jurusan">
               <i class="nc-icon nc-single-02"></i>
               <p>Data Jurusan</p>
