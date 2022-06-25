@@ -74,4 +74,10 @@ class MapelController extends Controller
         return redirect()->route('mapel.index')
             ->with('success', 'Mata Pelajaran Berhasil Dihapus');
     }
+
+    public function cetak_pdf() {
+        $guru = Mapel::all();
+        $pdf = Mapel::loadview('guru.guru_pdf', ['gurus'=>$guru]);
+        return $pdf->stream();
+    }
 }
