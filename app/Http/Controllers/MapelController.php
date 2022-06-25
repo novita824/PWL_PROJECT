@@ -25,7 +25,7 @@ class MapelController extends Controller
         $request->validate([
             'Hari' => 'required',
             'NamaMapel' => 'required',
-            'GuruPengampu' => 'required',
+            'GuruPengajar' => 'required',
         ]);
         Mapel::create($request->all());
         return redirect()->route('mapel.index')
@@ -49,7 +49,7 @@ class MapelController extends Controller
         $request->validate([
             'Hari' => 'required',
             'NamaMapel' => 'required',
-            'GuruPengampu' => 'required',
+            'GuruPengajar' => 'required',
         ]);
         Mapel::find($hari)->update($request->all());
         return redirect()->route('nama.index')
