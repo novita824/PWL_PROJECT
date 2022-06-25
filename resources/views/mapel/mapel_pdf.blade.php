@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DATA GURU</title>
+    <title>Jadwal Mata Pelajaran</title>
 </head>
 <body>
     <style type="text/css">
@@ -11,32 +11,24 @@
         }
     </style>
     <center>
-        <h5>DATA GURU SMKN 1 PIRWOSARI</h4>
+        <h5>Jadwal Mata Pelajaran XII Multimedia</h4>
     </center>
     
     <table class='table table-bordered'>
         <thead>
             <tr>
-                <th>NIK</th>
-                <th>Nama</th>
-                <th>Tanggal Lahir</th>
-                <th>Jenis Kelamin</th>
-                <th>Pendidikan</th>
-                <th>Mengajar Mata Pelajaran</th>
-                <th>Foto</th>
+                <th>Hari</th>
+                <th>Nama Mata Pelajaran</th>
+                <th>Guru Pengajar</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($guru as $gr)
+            @foreach($mapel as $mo)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{$gr->Nip}}</td>
-                <td>{{$gr->Nama}}</td>
-                <td>{{$gr->TanggalLahir}}</td>
-                <td>{{$gr->JenisKelamin}}</td>
-                <td>{{$gr->Pendidikan}}</td>
-                <td>{{$gr->MengajarMapel}}</td>
-                <td>{{$gr->PasFoto}}</td>
+                <td>{{$mp->Hari}}</td>
+                <td>{{$mp->NamaMapel}}</td>
+                <td>{{$mp->GuruPengajar}}</td>
             </tr>
             @endforeach
         </tbody>
