@@ -18,7 +18,7 @@ class CreateJurusanTable extends Migration
             $table->string('Kode', 30)->index();
             $table->string('Nama', 25)->index();
             $table->string('NamaPanjang', 55);
-            $table->string('Jurusan', 25);
+            $table->string('Jurusan', 55);
             $table->string('TotalUangGedung', 35);
             $table->timestamps();
         });
