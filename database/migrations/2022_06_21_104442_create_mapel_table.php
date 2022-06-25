@@ -17,7 +17,7 @@ class CreateMapelTable extends Migration
             $table->id('id_mapel');
             $table->string('Hari', 10)->index();
             $table->string('NamaMapel',20)->index();
-            $table->string('GuruPengajar',10);
+            $table->string('GuruPengajar',50);
             $table->timestamps();
         });
     }
