@@ -18,5 +18,6 @@ class Guru extends Model
         'JenisKelamin',
         'Pendidikan',
         'MengajarMapel',
+        'PasFoto'
     ];
 }

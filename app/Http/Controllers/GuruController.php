@@ -23,13 +23,18 @@ class GuruController extends Controller
 
     public function store(Request $request)
     {
+        if ($request ->file('image')) {
+            $fotoguru = $request->file('image')->store('images', 'public');
+        }
+
         $request->validate([
-            'Nip' => 'required',
-            'Nama' => 'required',
-            'TanggalLahir' => 'required',
-            'JenisKelamin' => 'required',
-            'Pendidikan' => 'required',
-            'MengajarMapel' => 'required',
+            'Nip'  => $request->Nip,
+            'Nama' => $request->Nama,
+            'TanggalLahir' => $request->TanggalLahir,
+            'JenisKelamin' => $request->JenisKelamin,
+            'Pendidikan' => $request->Pendidikan,
+            'MengajarMapel' => $request->MengajarMapel,
+            'PasFoto' => $fotoguru,
         ]);
         Guru::create($request->all());
         return redirect()->route('guru.index')
@@ -61,6 +66,15 @@ class GuruController extends Controller
         Guru::find($nip)->update($request->all());
         return redirect()->route('guru.index')
             ->with('success', 'Guru Berhasil Diupdate');
+        
+        if($guru->PasFoto && file_exists(storage_path('path/public/' . $guru->PasFoto))) {
+            \storage::delete('public/' . $guru->PasFoto);
+        }
+        $fotoguru = $request->file('image')->store('images', 'public');
+        $guru->PasFoto = $fotoguru;
+    
+        $guru->save();
+        return 'Guru berhasil diubah';
     }
 
     public function destroy($nip)
@@ -68,5 +82,11 @@ class GuruController extends Controller
         Guru::find($nip)->delete();
         return redirect()->route('guru.index')
             ->with('success', 'Guru Berhasil Dihapus');
+    }
+
+    public function cetak_pdf() {
+        $guru = Guru::all();
+        $pdf = PDF::loadview('guru.guru_pdf', ['gurus'=>$guru]);
+        return $pdf->stream();
     }
 }

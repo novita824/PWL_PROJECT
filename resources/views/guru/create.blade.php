@@ -46,7 +46,9 @@
         <label for="MengajarMapel">Mengajar Mata Pelajaran</label>
         <input type="MengajarMapel" name="MengajarMapel" class="form-control" id="MengajarMapel" ariadescribedby="MengajarMapel" >
     </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <label for="image">Foto</label>
+            <input type="file" class="form-control" required="required" name="image"></br>
+        <button type="submit" class="btn btn-primary">Submit</button>Page 1 of 3
     </form>
             </div>
         </div>

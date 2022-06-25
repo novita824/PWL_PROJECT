@@ -21,6 +21,7 @@ class CreateTableDataGuru extends Migration
             $table->string('JenisKelamin', 25);
             $table->string('Pendidikan', 35);
             $table->string('MengajarMapel', 35);
+            $table->string('PasFoto');
             $table->timestamps();
         });
     }

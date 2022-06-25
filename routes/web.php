@@ -26,6 +26,8 @@ Route::resource('guru', GuruController::class);
 Route::resource('mapel', MapelController::class);
 Route::resource('jurusan', JurusanController::class);
 
+Route::get('/guru/guru_pdf', [GuruController::class, 'guru_pdf']);
+
 Route::get('/login', function () {
     return view('login');
 });
