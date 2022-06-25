@@ -9,17 +9,11 @@ class Mapel extends Model
 {
     protected $table="mapel";
     public $timestamps= false;
-    protected $primaryKey = 'Nama';
+    protected $primaryKey = 'Hari';
 
     protected $fillable = [
-        'Nama',
-        'Tugas1',
-        'Tugas2',
-        'Tugas3',
-        'UTS',
-        'Tugas4',
-        'Tugas5',
-        'Tugas6',
-        'UAS',
+        'Hari',
+        'NamaMapel',
+        'GuruPengajar',
     ];
 }
