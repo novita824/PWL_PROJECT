@@ -23,40 +23,16 @@
     <form method="post" action="{{ route('mapel.store') }}" id="myForm">
     @csrf
         <div class="form-group">
-        <label for="Nama">Nama</label>
-        <input type="text" name="Nama" class="form-control" id="Nama" aria-describedby="Nama" >
+        <label for="Hari">Hari</label>
+        <input type="text" name="Hari" class="form-control" id="Hari" aria-describedby="Hari" >
     </div>
     <div class="form-group">
-        <label for="Tugas1">Tugas 1</label>
-        <input type="Tugas1" name="Tugas1" class="form-control" id="Tugas1" ariadescribedby="Tugas1" >
+        <label for="NamaMapel">Nama Mata Pelajaran</label>
+        <input type="NamaMapel" name="NamaMapel" class="form-control" id="NamaMapel" ariadescribedby="NamaMapel" >
     </div>
     <div class="form-group">
-        <label for="Tugas2">Tugas 2</label>
-        <input type="Tugas2" name="Tugas2" class="form-control" id="Tugas2" ariadescribedby="Tugas2" >
-    </div>
-    <div class="form-group">
-        <label for="Tugas3">Tugas 3</label>
-        <input type="Tugas3" name="Tugas3" class="form-control" id="Tugas3" ariadescribedby="Tugas3" >
-    </div>
-    <div class="form-group">
-        <label for="UTS">UTS</label>
-        <input type="UTS" name="UTS" class="form-control" id="UTS" ariadescribedby="UTS" >
-    </div>
-    <div class="form-group">
-        <label for="Tugas4">Tugas 4</label>
-        <input type="Tugas4" name="Tugas4" class="form-control" id="Tugas4" ariadescribedby="Tugas4" >
-    </div>
-    <div class="form-group">
-        <label for="Tugas5">Tugas 5</label>
-        <input type="Tugas5" name="Tugas5" class="form-control" id="Tugas5" ariadescribedby="Tugas5" >
-    </div>
-    <div class="form-group">
-        <label for="Tugas6">Tugas 6</label>
-        <input type="Tugas6" name="Tugas6" class="form-control" id="Tugas6" ariadescribedby="Tugas6" >
-    </div>
-    <div class="form-group">
-        <label for="UAS">UAS</label>
-        <input type="UAS" name="UAS" class="form-control" id="UAS" ariadescribedby="UAS" >
+        <label for="GuruPengajar">Guru Pengajar</label>
+        <input type="GuruPengajar" name="GuruPengajar" class="form-control" id="GuruPengajar" ariadescribedby="GuruPengajar" >
     </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

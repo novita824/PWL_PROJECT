@@ -9,15 +9,9 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>Nama : </b>{{$Mapel->Nama}}</li>
-                    <li class="list-group-item"><b>Tugas 1 : </b>{{$Mapel->Tugas1}}</li>
-                    <li class="list-group-item"><b>Tugas 2 : </b>{{$Mapel->Tugas2}}</li>
-                    <li class="list-group-item"><b>Tugas 3: </b>{{$Mapel->Tugas3}}</li>
-                    <li class="list-group-item"><b>UTS : </b>{{$Mapel->UTS}}</li>
-                    <li class="list-group-item"><b>Tugas 4 : </b>{{$Mapel->Tugas4}}</li>
-                    <li class="list-group-item"><b>Tugas 5 : </b>{{$Mapel->Tugas5}}</li>
-                    <li class="list-group-item"><b>Tugas 6 : </b>{{$Mapel->Tugas6}}</li>
-                    <li class="list-group-item"><b>UAS : </b>{{$Mapel->UAS}}</li>
+                    <li class="list-group-item"><b>Hari : </b>{{$Mapel->Hari}}</li>
+                    <li class="list-group-item"><b>Nama Mata Pelajaran : </b>{{$Mapel->NamaMapel}}</li>
+                    <li class="list-group-item"><b>Guru Pengajar : </b>{{$Mapel->GuruPengajar}}</li>
                 </ul>
             </div>
             <a class="btn btn-success mt-3" href="{{ route('mapel.index') }}">Kembali</a>
