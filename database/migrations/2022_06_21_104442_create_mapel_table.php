@@ -15,15 +15,9 @@ class CreateMapelTable extends Migration
     {
         Schema::create('mapel', function (Blueprint $table) {
             $table->id('id_mapel');
-            $table->string('Nama', 25)->index();
-            $table->string('Tugas1',10);
-            $table->string('Tugas2',10);
-            $table->string('Tugas3',10);
-            $table->string('UTS',10);
-            $table->string('Tugas4',10);
-            $table->string('Tugas5',10);
-            $table->string('Tugas6',10);
-            $table->string('UAS',10);
+            $table->string('Hari', 10)->index();
+            $table->string('NamaMapel',20)->index();
+            $table->string('GuruPengajar',10);
             $table->timestamps();
         });
     }
