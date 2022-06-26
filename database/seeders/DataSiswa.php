@@ -22,6 +22,7 @@ class DataSiswa extends Seeder
             'alamat' => 'Kediri',
             'agama' => 'Islam',
             'jurusan' => 'Multimedia',
+            'sppbulan' => '250.000',
             ],
         ];
         DB::table('siswa')->insert($siswaa);

@@ -37,6 +37,7 @@
             <th>Alamat</th>
             <th>Agama</th>
             <th>Jurusan</th>
+            <th>Spp Perbulan</th>
             <th width="260px">Action</th>
         </tr>
     @foreach ($siswa as $sws)
@@ -48,6 +49,7 @@
             <td>{{ $sws ->Alamat }}</td>
             <td>{{ $sws ->Agama }}</td>
             <td>{{ $sws ->Jurusan }}</td>
+            <td>{{ $sws ->SppBulan }}</td>
             <td>
             <form action="{{ route('siswa.destroy',['siswa'=>$sws->Kode]) }}" method="POST">
    

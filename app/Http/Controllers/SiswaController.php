@@ -31,6 +31,7 @@ class SiswaController extends Controller
             'Alamat' => 'required',
             'Agama' => 'required',
             'Jurusan' => 'required',
+            'SppBulan' => 'required',
         ]);
         Siswa::create($request->all());
         return redirect()->route('siswa.index')
@@ -59,6 +60,7 @@ class SiswaController extends Controller
             'Alamat' => 'required',
             'Agama' => 'required',
             'Jurusan' => 'required',
+            'SppBulan' => 'required',
         ]);
         Siswa::find($nisn)->update($request->all());
         return redirect()->route('siswa.index')

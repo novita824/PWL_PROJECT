@@ -50,6 +50,10 @@
         <label for="Jurusan">Jurusan</label>
         <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" ariadescribedby="Jurusan" >
     </div>
+    <div class="form-group">
+        <label for="SppBulan">Spp Perbulan</label>
+        <input type="SppBulan" name="SppBulan" class="form-control" id="SppBulan" ariadescribedby="SppBulan" >
+    </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
             </div>

@@ -19,5 +19,6 @@ class Siswa extends Model
         'Alamat',
         'Agama',
         'Jurusan',
+        'SppBulan',
     ];
 }

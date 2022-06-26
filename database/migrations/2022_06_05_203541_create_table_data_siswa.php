@@ -22,6 +22,7 @@ class CreateTableDataSiswa extends Migration
             $table->string('Alamat',25);
             $table->string('Agama',10);
             $table->string('Jurusan',35);
+            $table->string('SppBulan',50);
             $table->timestamps();
         });
     }

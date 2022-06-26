@@ -16,6 +16,7 @@
                     <li class="list-group-item"><b>Alamat: </b>{{$siswa->Alamat}}</li>
                     <li class="list-group-item"><b>Agama: </b>{{$siswa->Agama}}</li>
                     <li class="list-group-item"><b>Jurusan: </b>{{$siswa->Jurusan}}</li>
+                    <li class="list-group-item"><b>Spp Perbulan: </b>{{$siswa->SppBulan}}</li>
                 </ul>
             </div>
             <a class="btn btn-success mt-3" href="{{ route('siswa.index') }}">Kembali</a>
