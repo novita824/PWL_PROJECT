@@ -30,33 +30,21 @@
     <h3 style="margin-bottom: 40px;"></h3>
     <table class="table table-bordered">
         <tr>
-            <th>Nama</th>
-            <th>Tugas 1</th>
-            <th>Tugas 2</th>
-            <th>Tugas 3</th>
-            <th>UTS</th>
-            <th>Tugas 4</th>
-            <th>Tugas 5</th>
-            <th>Tugas 6</th>
-            <th>UAS</th>
+            <th>Hari</th>
+            <th>Nama Mata Pelajaran</th>
+            <th>Guru Pengajar</th>
             <th width="260px">Action</th>
         </tr>
     @foreach ($mapel as $mpl)
         <tr>
-            <td>{{ $mpl ->Nama }}</td>
-            <td>{{ $mpl ->Tugas1 }}</td>
-            <td>{{ $mpl ->Tugas2 }}</td>
-            <td>{{ $mpl ->Tugas3 }}</td>
-            <td>{{ $mpl ->UTS }}</td>
-            <td>{{ $mpl ->Tugas4 }}</td>
-            <td>{{ $mpl ->Tugas5 }}</td>
-            <td>{{ $mpl ->Tugas6 }}</td>
-            <td>{{ $mpl ->UAS }}</td>
+            <td>{{ $mpl ->Hari }}</td>
+            <td>{{ $mpl ->NamaMapel }}</td>
+            <td>{{ $mpl ->GuruPengajar }}</td>
             <td>
-            <form action="{{ route('mapel.destroy',['mapel'=>$mpl->Nama]) }}" method="POST">
+            <form action="{{ route('mapel.destroy',['mapel'=>$mpl->Hari]) }}" method="POST">
    
-                <a class="btn btn-info" href="{{ route('mapel.show',$mpl->Nama) }}">Show</a>
-                <a class="btn btn-primary" href="{{ route('mapel.edit',$mpl->Nama) }}">Edit</a>
+                <a class="btn btn-info" href="{{ route('mapel.show',$mpl->Hari) }}">Show</a>
+                <a class="btn btn-primary" href="{{ route('mapel.edit',$mpl->Hari) }}">Edit</a>
                 @csrf
                 @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>
