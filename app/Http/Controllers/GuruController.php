@@ -24,21 +24,19 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         if ($request ->file('image')) {
-            $PasFoto = $request->file('image')->store('images', 'public');
+            $fotoguru = $request->file('image')->store('images', 'public');
         }
 
-        $request->validate([
+        Guru::create([
             'Nip'  => $request->Nip,
             'Nama' => $request->Nama,
             'TanggalLahir' => $request->TanggalLahir,
             'JenisKelamin' => $request->JenisKelamin,
             'Pendidikan' => $request->Pendidikan,
             'MengajarMapel' => $request->MengajarMapel,
-            'PasFoto' => $PasFoto,
+            'PasFoto' => $fotoguru,
         ]);
-        Guru::create($request->all());
-        return redirect()->route('guru.index')
-            ->with('success', 'Guru Berhasil Ditambahkan');
+        return 'Guru telah disimpan';
     }
 
     public function show($nip)
@@ -55,23 +53,20 @@ class GuruController extends Controller
 
     public function update(Request $request, $nip)
     {
-        $request->validate([
-            'Nip' => 'required',
-            'Nama' => 'required',
-            'TanggalLahir' => 'required',
-            'JenisKelamin' => 'required',
-            'Pendidikan' => 'required',
-            'MengajarMapel' => 'required',
-        ]);
-        Guru::find($nip)->update($request->all());
-        return redirect()->route('guru.index')
-            ->with('success', 'Guru Berhasil Diupdate');
-        
+        $guru =Guru::find($nip);
+
+        $guru->Nip = $request->Nip;
+        $guru->Nama = $request->Nama;
+        $guru->TanggalLahir = $request->TanggalLahir;
+        $guru->JenisKelamin = $request->JenisKelamin;
+        $guru->Pendidikan = $request->Pendidikan;
+        $guru->MengajarMapel = $request->MengajarMapel;
+
         if($guru->PasFoto && file_exists(storage_path('path/public/' . $guru->PasFoto))) {
             \storage::delete('public/' . $guru->PasFoto);
         }
         $fotoguru = $request->file('image')->store('images', 'public');
-        $guru->PasFoto = $PasFoto;
+        $guru->PasFoto = $fotoguru;
     
         $guru->save();
         return 'Guru berhasil diubah';
@@ -86,7 +81,7 @@ class GuruController extends Controller
 
     public function cetak_pdf() {
         $guru = Guru::all();
-        $pdf = PDF::loadview('guru.guru_pdf', ['gurus'=>$guru]);
+        $pdf = PDF::loadview('guru.guru_pdf', ['guru'=>$guru]);
         return $pdf->stream();
     }
 }
