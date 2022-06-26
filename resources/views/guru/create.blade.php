@@ -48,7 +48,7 @@
     </div>
     <label for="image">Foto</label>
             <input type="file" class="form-control" required="required" name="image"></br>
-        <button type="submit" class="btn btn-primary">Submit</button>Page 1 of 3
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
             </div>
         </div>

@@ -24,7 +24,7 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         if ($request ->file('image')) {
-            $fotoguru = $request->file('image')->store('images', 'public');
+            $PasFoto = $request->file('image')->store('images', 'public');
         }
 
         $request->validate([
@@ -34,7 +34,7 @@ class GuruController extends Controller
             'JenisKelamin' => $request->JenisKelamin,
             'Pendidikan' => $request->Pendidikan,
             'MengajarMapel' => $request->MengajarMapel,
-            'PasFoto' => $fotoguru,
+            'PasFoto' => $PasFoto,
         ]);
         Guru::create($request->all());
         return redirect()->route('guru.index')
@@ -71,7 +71,7 @@ class GuruController extends Controller
             \storage::delete('public/' . $guru->PasFoto);
         }
         $fotoguru = $request->file('image')->store('images', 'public');
-        $guru->PasFoto = $fotoguru;
+        $guru->PasFoto = $PasFoto;
     
         $guru->save();
         return 'Guru berhasil diubah';
