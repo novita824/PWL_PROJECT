@@ -4,6 +4,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\MapelController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,7 @@ Route::resource('mapel', MapelController::class);
 Route::resource('jurusan', JurusanController::class);
 
 Route::get('/guru/guru_pdf', [GuruController::class, 'guru_pdf']);
-Route::get('/mapel/mapel_pdf', [GuruController::class, 'mapel_pdf']);
+Route::get('/mapel/mapel_pdf', [MapelController::class, 'mapel_pdf']);
 
 Route::get('/login', function () {
     return view('login');
