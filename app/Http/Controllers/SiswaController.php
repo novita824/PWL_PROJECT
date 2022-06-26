@@ -24,6 +24,7 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'Kode' => 'required',
             'Nisn' => 'required',
             'Nama' => 'required',
             'TanggalLahir' => 'required',
@@ -36,21 +37,22 @@ class SiswaController extends Controller
             ->with('success', 'Siswa Berhasil Ditambahkan');
     }
 
-    public function show($nisn)
+    public function show($nama)
     {
-        $siswa = Siswa::find($nisn);
+        $siswa = Siswa::find($nama);
         return view('siswa.detail', compact('siswa'));
     }
     
-    public function edit($nisn)
+    public function edit($nama)
     {
-        $siswa = DB::table('Siswa')->where('Nisn', $nisn)->first();
+        $siswa = DB::table('Siswa')->where('Nisn', $nama)->first();
         return view('siswa.edit', compact('siswa'));
     }
 
     public function update(Request $request, $nisn)
     {
         $request->validate([
+            'Kode' => 'required',
             'Nisn' => 'required',
             'Nama' => 'required',
             'TanggalLahir' => 'required',

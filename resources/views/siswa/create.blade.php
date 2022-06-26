@@ -12,7 +12,7 @@
             <div class="card-body">
                 @if ($errors->any())
             <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>Whoops!</strong> Maaf Anda salah untuk menginputkan data mata pelajaran<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
@@ -22,7 +22,11 @@
         @endif
     <form method="post" action="{{ route('siswa.store') }}" id="myForm">
     @csrf
-        <div class="form-group">
+    <div class="form-group">
+        <label for="Kode">Kode</label>
+        <input type="text" name="Kode" class="form-control" id="Kode" aria-describedby="Kode" >
+    </div>
+    <div class="form-group">
         <label for="Nisn">Nisn</label>
         <input type="text" name="Nisn" class="form-control" id="Nisn" aria-describedby="Nisn" >
     </div>

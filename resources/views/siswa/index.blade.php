@@ -30,6 +30,7 @@
     <h3 style="margin-bottom: 40px;"></h3>
     <table class="table table-bordered">
         <tr>
+            <th>Kode</th>
             <th>Nisn</th>
             <th>Nama</th>
             <th>Tanggal Lahir</th>
@@ -40,7 +41,7 @@
         </tr>
     @foreach ($siswa as $sws)
         <tr>
-   
+            <td>{{ $sws ->Kode }}</td>
             <td>{{ $sws ->Nisn }}</td>
             <td>{{ $sws ->Nama }}</td>
             <td>{{ $sws ->TanggalLahir }}</td>
@@ -48,10 +49,10 @@
             <td>{{ $sws ->Agama }}</td>
             <td>{{ $sws ->Jurusan }}</td>
             <td>
-            <form action="{{ route('siswa.destroy',['siswa'=>$sws->Nisn]) }}" method="POST">
+            <form action="{{ route('siswa.destroy',['siswa'=>$sws->Kode]) }}" method="POST">
    
-                <a class="btn btn-info" href="{{ route('siswa.show',$sws->Nisn) }}">Show</a>
-                <a class="btn btn-primary" href="{{ route('siswa.edit',$sws->Nisn) }}">Edit</a>
+                <a class="btn btn-info" href="{{ route('siswa.show',$sws->Kode) }}">Show</a>
+                <a class="btn btn-primary" href="{{ route('siswa.edit',$sws->Kode) }}">Edit</a>
                 @csrf
                 @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>

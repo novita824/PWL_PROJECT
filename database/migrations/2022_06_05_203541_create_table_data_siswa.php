@@ -15,6 +15,7 @@ class CreateTableDataSiswa extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->id('id_siswa');
+            $table->string('Kode', 10)->index();
             $table->string('Nisn', 10)->index();
             $table->string('Nama', 25)->index();
             $table->string('TanggalLahir',25);

@@ -1,6 +1,17 @@
 @extends('template')
 @section('content')
 <div class="content">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-10 col-md-10">
+            <div style="text-align:center">
+  <h3> SELAMAT DATANG DI WEBSITE SMKN 1 PURWOSARI </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
@@ -23,7 +34,7 @@
             <hr>
             <div class="stats">
               <i class="fa fa-refresh"></i>
-              Update Now
+              Data Siswa
             </div>
           </div>
         </div>
@@ -34,7 +45,7 @@
             <div class="row">
               <div class="col-5 col-md-4">
                 <div class="icon-big text-center icon-warning">
-                  <i class="nc-icon nc-money-coins text-success"></i>
+                  <i class="nc-icon nc-favourite-28 text-success"></i>
                 </div>
               </div>
               <div class="col-7 col-md-8">
@@ -48,8 +59,8 @@
           <div class="card-footer ">
             <hr>
             <div class="stats">
-              <i class="fa fa-calendar-o"></i>
-              Last day
+              <i class="fa fa-refresh"></i>
+              Data Guru
             </div>
           </div>
         </div>
@@ -60,7 +71,7 @@
             <div class="row">
               <div class="col-5 col-md-4">
                 <div class="icon-big text-center icon-warning">
-                  <i class="nc-icon nc-vector text-danger"></i>
+                  <i class="nc-icon nc-globe text-danger"></i>
                 </div>
               </div>
               <div class="col-7 col-md-8">
@@ -74,8 +85,8 @@
           <div class="card-footer ">
             <hr>
             <div class="stats">
-              <i class="fa fa-clock-o"></i>
-              In the last hour
+              <i class="fa fa-book"></i>
+              Data Mata Pelajaran
             </div>
           </div>
         </div>
@@ -100,8 +111,8 @@
           <div class="card-footer ">
             <hr>
             <div class="stats">
-              <i class="fa fa-refresh"></i>
-              Update now
+              <i class="fa fa-building"></i>
+              Data Jurusan
             </div>
           </div>
         </div>

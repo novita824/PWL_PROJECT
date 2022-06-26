@@ -24,8 +24,12 @@
     @csrf
     @method('PUT')
     <div class="form-group">
-    <label for="Nisn">Nisn</label>
-    <input type="text" name="Nisn" class="form-control" id="Nisn" value="{{ $siswa->Nisn }}" aria-describedby="Nisn" >
+        <label for="Kode">Kode</label>
+        <input type="text" name="Kode" class="form-control" id="Kode" value="{{ $mapel->Kode }}" aria-describedby="Kode" >
+    </div>
+    <div class="form-group">
+        <label for="Nisn">Nisn</label>
+        <input type="text" name="Nisn" class="form-control" id="Nisn" value="{{ $siswa->Nisn }}" aria-describedby="Nisn" >
     </div>
     <div class="form-group">
         <label for="Nama">Nama</label>
