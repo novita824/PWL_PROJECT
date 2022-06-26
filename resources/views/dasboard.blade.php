@@ -1,17 +1,6 @@
 @extends('template')
 @section('content')
 <div class="content">
-    <div class="card card-stats">
-      <div class="card-body ">
-        <div class="row">
-          <div class="col-10 col-md-10">
-            <div style="text-align:center">
-  <h3> SELAMAT DATANG DI WEBSITE SMKN 1 PURWOSARI </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
