@@ -23,8 +23,12 @@
     <form method="post" action="{{ route('guru.store') }}" id="myForm">
     @csrf
         <div class="form-group">
+        <label for="Kode">Kode</label>
+        <input type="text" name="Kode" class="form-control" id="Kode" aria-describedby="Kode" >
+    </div>
+    <div class="form-group">
         <label for="Nip">Nip</label>
-        <input type="text" name="Nip" class="form-control" id="Nip" aria-describedby="Nip" >
+        <input type="Nip" name="Nip" class="form-control" id="Nip" ariadescribedby="Nip" >
     </div>
     <div class="form-group">
         <label for="Nama">Nama</label>

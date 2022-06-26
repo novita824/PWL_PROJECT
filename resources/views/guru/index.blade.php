@@ -30,6 +30,7 @@
     <h3 style="margin-bottom: 40px;"></h3>
     <table class="table table-bordered">
         <tr>
+            <th>Kode</th>
             <th>Nip</th>
             <th>Nama</th>
             <th>Tanggal Lahir</th>
@@ -40,7 +41,7 @@
         </tr>
     @foreach ($guru as $gr)
         <tr>
-   
+            <td>{{ $gr ->Kode }}</td>
             <td>{{ $gr ->Nip }}</td>
             <td>{{ $gr ->Nama }}</td>
             <td>{{ $gr ->TanggalLahir }}</td>
@@ -48,10 +49,10 @@
             <td>{{ $gr ->Pendidikan }}</td>
             <td>{{ $gr ->MengajarMapel }}</td>
             <td>
-            <form action="{{ route('guru.destroy',['guru'=>$gr->Nip]) }}" method="POST">
+            <form action="{{ route('guru.destroy',['guru'=>$gr->Kode]) }}" method="POST">
    
-                <a class="btn btn-info" href="{{ route('guru.show',$gr->Nip) }}">Show</a>
-                <a class="btn btn-primary" href="{{ route('guru.edit',$gr->Nip) }}">Edit</a>
+                <a class="btn btn-info" href="{{ route('guru.show',$gr->Kode) }}">Show</a>
+                <a class="btn btn-primary" href="{{ route('guru.edit',$gr->Kode) }}">Edit</a>
                 @csrf
                 @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>

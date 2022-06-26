@@ -11,13 +11,14 @@
         }
     </style>
     <center>
-        <h5>DATA GURU SMKN 1 PIRWOSARI</h4>
+        <h5>DATA GURU SMKN 1 PURWOSARI</h4>
     </center>
     
     <table class='table table-bordered'>
         <thead>
             <tr>
-                <th>NIK</th>
+                <th>Kode</th>
+                <th>Nip</th>
                 <th>Nama</th>
                 <th>Tanggal Lahir</th>
                 <th>Jenis Kelamin</th>
@@ -30,6 +31,7 @@
             @foreach($guru as $gr)
             <tr>
                 <td>{{ $loop->iteration }}</td>
+                <td>{{$gr->Kode}}</td>
                 <td>{{$gr->Nip}}</td>
                 <td>{{$gr->Nama}}</td>
                 <td>{{$gr->TanggalLahir}}</td>

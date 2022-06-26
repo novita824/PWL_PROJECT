@@ -15,6 +15,7 @@ class CreateTableDataGuru extends Migration
     {
         Schema::create('guru', function (Blueprint $table) {
             $table->id('id_guru');
+            $table->string('Kode', 10)->index();
             $table->string('Nip', 30)->index();
             $table->string('Nama', 25)->index();
             $table->string('TanggalLahir', 35);

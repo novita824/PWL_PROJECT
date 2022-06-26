@@ -11,7 +11,7 @@ class GuruController extends Controller
     public function index()
     {
         $guru = Guru::all();
-        $posts = Guru::orderBy('Nip', 'desc')->paginate(6);
+        $posts = Guru::orderBy('Kode', 'desc')->paginate(6);
         return view('guru.index', compact('guru'))
         ->with('paginate', (request()->input('page', 1) - 1) * 5);
     }
@@ -28,6 +28,7 @@ class GuruController extends Controller
         }
 
         Guru::create([
+            'Kode'  => $request->Kode,
             'Nip'  => $request->Nip,
             'Nama' => $request->Nama,
             'TanggalLahir' => $request->TanggalLahir,
@@ -39,22 +40,23 @@ class GuruController extends Controller
         return 'Guru telah disimpan';
     }
 
-    public function show($nip)
+    public function show($kode)
     {
-        $guru = Guru::find($nip);
+        $guru = Guru::find($kode);
         return view('guru.detail', compact('guru'));
     }
     
-    public function edit($nip)
+    public function edit($kode)
     {
-        $guru = DB::table('Guru')->where('Nip', $nip)->first();
+        $guru = DB::table('Guru')->where('Kode', $kode)->first();
         return view('guru.edit', compact('guru'));
     }
 
-    public function update(Request $request, $nip)
+    public function update(Request $request, $kode)
     {
-        $guru =Guru::find($nip);
+        $guru =Guru::find($kode);
 
+        $guru->Kode = $request->Kode;
         $guru->Nip = $request->Nip;
         $guru->Nama = $request->Nama;
         $guru->TanggalLahir = $request->TanggalLahir;
@@ -72,9 +74,9 @@ class GuruController extends Controller
         return 'Guru berhasil diubah';
     }
 
-    public function destroy($nip)
+    public function destroy($kode)
     {
-        Guru::find($nip)->delete();
+        Guru::find($kode)->delete();
         return redirect()->route('guru.index')
             ->with('success', 'Guru Berhasil Dihapus');
     }
