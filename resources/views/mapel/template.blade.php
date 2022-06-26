@@ -40,7 +40,7 @@ Coded by www.creative-tim.com
       <div class="logo">
         <a href="https://www.smkn1purwosari.sch.id/public/img/fav.png" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../assets/img/logo-small.png">
+            <img src="https://www.smkn1purwosari.sch.id/public/img/fav.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
