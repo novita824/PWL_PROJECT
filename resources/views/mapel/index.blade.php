@@ -30,6 +30,7 @@
     <h3 style="margin-bottom: 40px;"></h3>
     <table class="table table-bordered">
         <tr>
+            <th>Kode</th>
             <th>Hari</th>
             <th>Nama Mata Pelajaran</th>
             <th>Guru Pengajar</th>
@@ -37,14 +38,15 @@
         </tr>
     @foreach ($mapel as $mpl)
         <tr>
+            <td>{{ $mpl ->Kode }}</td>
             <td>{{ $mpl ->Hari }}</td>
             <td>{{ $mpl ->NamaMapel }}</td>
             <td>{{ $mpl ->GuruPengajar }}</td>
             <td>
-            <form action="{{ route('mapel.destroy',['mapel'=>$mpl->Hari]) }}" method="POST">
+            <form action="{{ route('mapel.destroy',['mapel'=>$mpl->Kode]) }}" method="POST">
    
-                <a class="btn btn-info" href="{{ route('mapel.show',$mpl->Hari) }}">Show</a>
-                <a class="btn btn-primary" href="{{ route('mapel.edit',$mpl->Hari) }}">Edit</a>
+                <a class="btn btn-info" href="{{ route('mapel.show',$mpl->Kode) }}">Show</a>
+                <a class="btn btn-primary" href="{{ route('mapel.edit',$mpl->Kode) }}">Edit</a>
                 @csrf
                 @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>

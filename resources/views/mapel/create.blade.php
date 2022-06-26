@@ -12,7 +12,7 @@
             <div class="card-body">
                 @if ($errors->any())
             <div class="alert alert-danger">
-            <strong>Whoops!</strong>Maaf Anda salah untuk menginputkan data mata pelajaran<br><br>
+            <strong>Whoops!</strong> Maaf Anda salah untuk menginputkan data mata pelajaran<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
@@ -22,7 +22,11 @@
         @endif
     <form method="post" action="{{ route('mapel.store') }}" id="myForm">
     @csrf
-        <div class="form-group">
+    <div class="form-group">
+        <label for="Kode">Kode</label>
+        <input type="text" name="Kode" class="form-control" id="Kode" aria-describedby="Kode" >
+    </div>
+    <div class="form-group">
         <label for="Hari">Hari</label>
         <input type="text" name="Hari" class="form-control" id="Hari" aria-describedby="Hari" >
     </div>

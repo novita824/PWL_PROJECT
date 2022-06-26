@@ -15,6 +15,7 @@ class CreateMapelTable extends Migration
     {
         Schema::create('mapel', function (Blueprint $table) {
             $table->id('id_mapel');
+            $table->string('Kode', 10)->index();
             $table->string('Hari', 10)->index();
             $table->string('NamaMapel',20)->index();
             $table->string('GuruPengajar',50);
