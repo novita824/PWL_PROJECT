@@ -11,13 +11,13 @@
         }
     </style>
     <center>
-        <h5>DATA GURU SMKN 1 PIRWOSARI</h4>
+        <h5>DATA GURU SMKN 1 PURWOSARI</h4>
     </center>
     
     <table class='table table-bordered'>
         <thead>
             <tr>
-                <th>NIK</th>
+                <th>Nip</th>
                 <th>Nama</th>
                 <th>Tanggal Lahir</th>
                 <th>Jenis Kelamin</th>
