@@ -17,6 +17,7 @@
     <table class='table table-bordered'>
         <thead>
             <tr>
+                <th>Kode</th>
                 <th>Nip</th>
                 <th>Nama</th>
                 <th>Tanggal Lahir</th>
@@ -30,6 +31,7 @@
             @foreach($guru as $gr)
             <tr>
                 <td>{{ $loop->iteration }}</td>
+                <td>{{$gr->Kode}}</td>
                 <td>{{$gr->Nip}}</td>
                 <td>{{$gr->Nama}}</td>
                 <td>{{$gr->TanggalLahir}}</td>

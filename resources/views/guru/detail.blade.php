@@ -9,7 +9,8 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>Nip: </b>{{$guru->Nisn}}</li>
+                    <li class="list-group-item"><b>Kode: </b>{{$guru->Kode}}</li>
+                    <li class="list-group-item"><b>Nip: </b>{{$guru->Nip}}</li>
                     <li class="list-group-item"><b>Nama: </b>{{$guru->Nama}}</li>
                     <li class="list-group-item"><b>Tanggal Lahir: </b>{{$guru->TanggalLahir}}</li>
                     <li class="list-group-item"><b>Jenis Kelamin: </b>{{$guru->JenisKelamin}}</li>

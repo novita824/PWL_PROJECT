@@ -8,7 +8,7 @@
             <div class="pull-left mt-2">
             </div>
             <div class="float-right my-2">
-                <a class="btn btn-success" href="{{ route('jurusan.create') }}"> Input Guru</a>
+                <a class="btn btn-success" href="{{ route('jurusan.create') }}"> Input Jurusan</a>
             </div>
         </div>
     </div>

@@ -20,12 +20,16 @@
     </ul>
     </div>
     @endif
-    <form method="post" action="{{ route('guru.update', $guru->Nip) }}" id="myForm">
+    <form method="post" action="{{ route('guru.update', $guru->Kode) }}" id="myForm">
     @csrf
     @method('PUT')
     <div class="form-group">
-    <label for="Nip">Nip</label>
-    <input type="text" name="Nip" class="form-control" id="Nip" value="{{ $guru->Nip }}" aria-describedby="Nip" >
+    <label for="Kode">Kode</label>
+    <input type="text" name="Kode" class="form-control" id="Kode" value="{{ $guru->Kode }}" aria-describedby="Kode" >
+    </div>
+    <div class="form-group">
+        <label for="Nip">Nip</label>
+        <input type="text" name="Nip" class="form-control" id="Nip" value="{{ $guru->Nip }}" aria-describedby="Nip" >
     </div>
     <div class="form-group">
         <label for="Nama">Nama</label>
